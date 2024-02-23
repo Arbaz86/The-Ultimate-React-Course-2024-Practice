@@ -8,7 +8,7 @@ const BillInput = ({ children, bill, onSetBill }) => {
         type="text"
         placeholder="Bill value"
         value={bill}
-        onChange={(e) => onSetBill(e.target.value)}
+        onChange={(e) => onSetBill(Number(e.target.value))}
       />
     </div>
   );
