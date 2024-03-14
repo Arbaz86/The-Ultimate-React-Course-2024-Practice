@@ -2,61 +2,60 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 const TextExpander = ({
-  collapsedNumWords = 10,
+  collapsedWordsLimit = 10,
   expandButtonText = "Show more",
   collapseButtonText = "Collapse",
   buttonColor = "#333",
   textColor = "#111",
-  expanded = false,
+  isExpandedByDefault = false,
   className = "",
-  buttonInline = true,
+  inlineButton = true,
   textSize = "18px",
   children,
 }) => {
-  const [expand, setExpand] = useState(expanded);
-  const shortText = expand
+  const [isExpanded, setIsExpanded] = useState(isExpandedByDefault);
+  const truncatedText = isExpanded
     ? children
-    : children.split(" ").slice(0, collapsedNumWords).join(" ");
+    : children.split(" ").slice(0, collapsedWordsLimit).join(" ") +
+      (children.split(" ").length > collapsedWordsLimit ? "..." : "");
 
   const buttonStyle = {
     border: 0,
     color: buttonColor,
     backgroundColor: "transparent",
     cursor: "pointer",
-    display: buttonInline ? "inline" : "block",
+    display: inlineButton ? "inline" : "block",
   };
   const textStyle = {
     color: textColor,
     fontSize: textSize,
   };
 
-  const handleCollapse = () => {
-    setExpand((prev) => !prev);
+  const toggleExpansion = () => {
+    setIsExpanded((prevState) => !prevState);
   };
 
   return (
     <div className={className}>
-      <span style={textStyle}>
-        {shortText} {!expand && "..."}
-      </span>
-      <button onClick={handleCollapse} style={buttonStyle}>
-        {expand ? collapseButtonText : expandButtonText}
+      <span style={textStyle}>{truncatedText}</span>
+      <button onClick={toggleExpansion} style={buttonStyle}>
+        {isExpanded ? collapseButtonText : expandButtonText}
       </button>
     </div>
   );
 };
 
 TextExpander.propTypes = {
-  collapsedNumWords: PropTypes.number,
+  collapsedWordsLimit: PropTypes.number,
   expandButtonText: PropTypes.string,
   collapseButtonText: PropTypes.string,
   buttonColor: PropTypes.string,
   textColor: PropTypes.string,
-  expanded: PropTypes.bool,
+  isExpandedByDefault: PropTypes.bool,
   className: PropTypes.string,
-  buttonInline: PropTypes.bool,
+  inlineButton: PropTypes.bool,
   textSize: PropTypes.string,
-  children: PropTypes.any,
+  children: PropTypes.string.isRequired,
 };
 
 export default TextExpander;
