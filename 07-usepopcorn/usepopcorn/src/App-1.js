@@ -10,6 +10,7 @@ import WatchedMovieList from "./components/WatchedMovieList";
 import { useEffect } from "react";
 import Loader from "./components/Loader";
 import MovieDetails from "./components/MovieDetails";
+import { API_KEY } from "./utils/constant";
 
 const tempMovieData = [
   {
@@ -58,8 +59,6 @@ const tempWatchedData = [
   },
 ];
 
-const KEY = "f4baae59";
-
 export default function App() {
   const [query, setQuery] = useState("");
   const [movies, setMovies] = useState([]);
@@ -82,7 +81,7 @@ export default function App() {
         setIsLoading(true);
         setError("");
         const res = await fetch(
-          `http://www.omdbapi.com/?apikey=${KEY}&s=${query}`
+          `http://www.omdbapi.com/?apikey=${API_KEY}&s=${query}`
         );
         if (!res.ok)
           throw new Error("Something went wrong with fetching movies ");
@@ -129,7 +128,11 @@ export default function App() {
             )}
           </div>
           {!error && !isLoading && (
-            <MovieList movies={movies} onSelectedMovie={handleSelectMovie} />
+            <MovieList
+              movies={movies}
+              onSelectedMovie={handleSelectMovie}
+              selectedId={selectedId}
+            />
           )}
         </Box>
         <Box>
