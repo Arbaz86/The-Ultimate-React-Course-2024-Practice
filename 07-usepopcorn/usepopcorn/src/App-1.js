@@ -62,7 +62,7 @@ const tempWatchedData = [
 export default function App() {
   const [query, setQuery] = useState("");
   const [movies, setMovies] = useState([]);
-  const [watched, setWatched] = useState(tempWatchedData);
+  const [watched, setWatched] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [selectedId, setSelectedId] = useState(null);
@@ -74,6 +74,13 @@ export default function App() {
   function handleCloseMovie() {
     setSelectedId(null);
   }
+
+  function handleAddWatched(movie) {
+    // Update the watched list by adding the new movie
+    setWatched((prevWatched) => [...prevWatched, movie]);
+  }
+
+  function handleDeleteWatched(movieId) {}
 
   useEffect(() => {
     async function fetchMovies() {
@@ -140,6 +147,8 @@ export default function App() {
             <MovieDetails
               selectedId={selectedId}
               onCloseMovie={handleCloseMovie}
+              onAddWatched={handleAddWatched}
+              watched={watched}
             />
           ) : (
             <>

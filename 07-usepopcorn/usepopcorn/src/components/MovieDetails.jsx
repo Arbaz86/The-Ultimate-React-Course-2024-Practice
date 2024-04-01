@@ -3,9 +3,10 @@ import { API_KEY } from "../utils/constant";
 import StarRating from "./StarRating";
 import Loader from "./Loader";
 
-const MovieDetails = ({ selectedId, onCloseMovie }) => {
+const MovieDetails = ({ selectedId, onCloseMovie, onAddWatched, watched }) => {
   const [movie, setMovie] = useState({});
   const [isLoading, setIsLoading] = useState(false);
+  const [userRating, setUserRating] = useState();
 
   const {
     Title: title,
@@ -13,11 +14,30 @@ const MovieDetails = ({ selectedId, onCloseMovie }) => {
     Runtime: runtime,
     imdbRating,
     Plot: plot,
+    year,
     Released: released,
     Actors: actors,
     Director: director,
     Genre: genre,
   } = movie;
+
+  const isWatched = watched.find((item) => item.imdbID === movie.imdbID);
+  const watchedUserRating = isWatched?.imdbRating;
+
+  function handleAdd() {
+    const newWatchedMovie = {
+      imdbID: selectedId,
+      imdbRating: Number(imdbRating),
+      title,
+      year,
+      poster,
+      runtime: runtime.split(" ").at(0),
+      userRating,
+    };
+
+    onAddWatched(newWatchedMovie);
+    onCloseMovie();
+  }
 
   useEffect(() => {
     async function getMovieDetails() {
@@ -66,7 +86,23 @@ const MovieDetails = ({ selectedId, onCloseMovie }) => {
 
           <section>
             <div className="rating">
-              <StarRating size={24} maxRating={10} key={selectedId} />
+              {!isWatched ? (
+                <>
+                  <StarRating
+                    size={24}
+                    maxRating={10}
+                    key={selectedId}
+                    onSetRating={setUserRating}
+                  />
+                  {userRating && (
+                    <button className="btn-add" onClick={handleAdd}>
+                      + Add to list
+                    </button>
+                  )}
+                </>
+              ) : (
+                <p>You've rated this movie {watchedUserRating} ⭐.</p>
+              )}
             </div>
             <p>
               <em>{plot}</em>
