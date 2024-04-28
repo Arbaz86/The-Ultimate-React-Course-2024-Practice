@@ -49,7 +49,7 @@ const MovieDetails = ({ selectedId, onCloseMovie, onAddWatched, watched }) => {
         const data = await res.json();
         setMovie(data);
       } catch (error) {
-        console.error(error.messsage);
+        console.error(error.message);
       } finally {
         setIsLoading(false);
       }
@@ -57,6 +57,11 @@ const MovieDetails = ({ selectedId, onCloseMovie, onAddWatched, watched }) => {
 
     getMovieDetails();
   }, [selectedId]);
+
+  useEffect(() => {
+    if (!title) return;
+    document.title = `Movie | ${title}`;
+  }, [title]);
 
   return (
     <div className="details">
