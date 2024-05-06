@@ -46,7 +46,6 @@ const StarRating = ({
         ))}
       </div>
       <p style={testStyle}>
-        {" "}
         {messages.length === maxRating
           ? messages[tempRating ? tempRating - 1 : rating - 1]
           : tempRating || rating || ""}{" "}
