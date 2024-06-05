@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { API_KEY } from "../utils/constant";
 import StarRating from "./StarRating";
 import Loader from "./Loader";
@@ -24,6 +24,8 @@ const MovieDetails = ({ selectedId, onCloseMovie, onAddWatched, watched }) => {
   const isWatched = watched.find((item) => item.imdbID === movie.imdbID);
   const watchedUserRating = isWatched?.imdbRating;
 
+  const countRef = useRef(0);
+
   function handleAdd() {
     const newWatchedMovie = {
       imdbID: selectedId,
@@ -33,6 +35,7 @@ const MovieDetails = ({ selectedId, onCloseMovie, onAddWatched, watched }) => {
       poster,
       runtime: runtime.split(" ").at(0),
       userRating,
+      countRatingDecisions: countRef.current,
     };
 
     onAddWatched(newWatchedMovie);
@@ -79,6 +82,10 @@ const MovieDetails = ({ selectedId, onCloseMovie, onAddWatched, watched }) => {
       // console.log(`Clean up effect for movie ${title}`);
     };
   }, [title]);
+
+  useEffect(() => {
+    if (userRating) countRef.current++;
+  }, [userRating]);
 
   return (
     <div className="details">
