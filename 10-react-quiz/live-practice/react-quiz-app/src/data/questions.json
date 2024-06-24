@@ -135,5 +135,122 @@
       "correctOption": 3,
       "points": 20
     }
+  ],
+  "flutterQuestions": [
+    {
+      "question": "What is the purpose of the 'GlobalKey' in Flutter?",
+      "options": [
+        "To uniquely identify a widget",
+        "To manage the state of a widget",
+        "To access the widget's context",
+        "All of the above"
+      ],
+      "correctOption": 3,
+      "points": 30,
+      "id": "b001"
+    },
+    {
+      "question": "Which method would you override to customize the behavior when a StatefulWidget is disposed?",
+      "options": [
+        "dispose()",
+        "deactivate()",
+        "didChangeDependencies()",
+        "didUpdateWidget()"
+      ],
+      "correctOption": 0,
+      "points": 30,
+      "id": "b002"
+    },
+    {
+      "question": "How can you optimize a widget rebuild performance in Flutter?",
+      "options": [
+        "Using const constructors",
+        "Using keys",
+        "Using the RepaintBoundary widget",
+        "All of the above"
+      ],
+      "correctOption": 3,
+      "points": 30,
+      "id": "b003"
+    },
+    {
+      "question": "What does the 'InheritedWidget' do in Flutter?",
+      "options": [
+        "Holds data that can be accessed by descendant widgets",
+        "Manages the state of its child widgets",
+        "Provides a widget that has been inherited from another widget",
+        "Allows the creation of complex animations"
+      ],
+      "correctOption": 0,
+      "points": 30,
+      "id": "b004"
+    },
+    {
+      "question": "How would you implement a custom painter in Flutter?",
+      "options": [
+        "Using the CustomPainter class",
+        "Using the Canvas class directly",
+        "Using the ShapeBorder class",
+        "Using the BoxPainter class"
+      ],
+      "correctOption": 0,
+      "points": 30,
+      "id": "b005"
+    },
+    {
+      "question": "Which widget is used to handle gestures in Flutter?",
+      "options": [
+        "GestureDetector",
+        "Listener",
+        "GestureHandler",
+        "EventDetector"
+      ],
+      "correctOption": 0,
+      "points": 30,
+      "id": "b006"
+    },
+    {
+      "question": "What is the difference between 'mainAxisAlignment' and 'crossAxisAlignment' in a Row widget?",
+      "options": [
+        "mainAxisAlignment aligns children horizontally, crossAxisAlignment aligns children vertically",
+        "mainAxisAlignment aligns children vertically, crossAxisAlignment aligns children horizontally",
+        "mainAxisAlignment aligns children along the main axis, crossAxisAlignment aligns children along the cross axis",
+        "There is no difference"
+      ],
+      "correctOption": 2,
+      "points": 30,
+      "id": "b007"
+    },
+    {
+      "question": "In Flutter, what is the difference between 'StreamBuilder' and 'FutureBuilder'?",
+      "options": [
+        "StreamBuilder handles asynchronous data streams, FutureBuilder handles a single asynchronous computation",
+        "FutureBuilder handles asynchronous data streams, StreamBuilder handles a single asynchronous computation",
+        "StreamBuilder is used for handling real-time data, FutureBuilder is not",
+        "There is no difference"
+      ],
+      "correctOption": 0,
+      "points": 30,
+      "id": "b008"
+    },
+    {
+      "question": "Which architectural pattern does the 'Provider' package in Flutter support?",
+      "options": ["MVC", "MVVM", "Redux", "BLoC"],
+      "correctOption": 1,
+      "points": 30,
+      "id": "b009"
+    },
+    {
+      "question": "How do you perform dependency injection in Flutter?",
+      "options": [
+        "Using the Provider package",
+        "Using the InheritedWidget",
+        "Using the GetIt package",
+        "All of the above"
+      ],
+      "correctOption": 3,
+      "points": 30,
+      "id": "b010"
+    }
   ]
 }
