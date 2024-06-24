@@ -57,6 +57,8 @@ function reducer(state, { type, payload }) {
         highscore:
           state.points > state.highscore ? state.points : state.highscore,
       };
+    case "restart":
+      return { ...state, status: "ready", index: 0, answer: null, points: 0 };
     default:
       return state;
   }
@@ -117,6 +119,7 @@ function App() {
               points={points}
               maxPossiblePoints={maxPossiblePoints}
               highscore={highscore}
+              dispatch={dispatch}
             />
           )}
         </Main>

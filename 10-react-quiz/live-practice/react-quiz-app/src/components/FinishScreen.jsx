@@ -1,6 +1,6 @@
 import { PropTypes } from "prop-types";
 
-const FinishScreen = ({ points, maxPossiblePoints, highscore }) => {
+const FinishScreen = ({ points, maxPossiblePoints, highscore, dispatch }) => {
   const percentage = (points / maxPossiblePoints) * 100;
 
   let emoji;
@@ -18,6 +18,14 @@ const FinishScreen = ({ points, maxPossiblePoints, highscore }) => {
       </p>
 
       <p className="highscrore">(Highscore: {highscore} points)</p>
+      <div>
+        <button
+          className="btn btn-ui"
+          onClick={() => dispatch({ type: "restart" })}
+        >
+          Restart Quiz
+        </button>
+      </div>
     </div>
   );
 };
@@ -26,6 +34,7 @@ FinishScreen.propTypes = {
   points: PropTypes.number.isRequired,
   maxPossiblePoints: PropTypes.number.isRequired,
   highscore: PropTypes.number.isRequired,
+  dispatch: PropTypes.any.isRequired,
 };
 
 export default FinishScreen;
