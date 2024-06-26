@@ -11,22 +11,21 @@ const FinishScreen = ({ points, maxPossiblePoints, highscore, dispatch }) => {
   if (percentage === 0) emoji = "🤦‍♂️";
 
   return (
-    <div className="result">
-      <p>
+    <>
+      <p className="result">
         <span>{emoji}</span> You scored <strong>{points}</strong> out of{" "}
         {maxPossiblePoints} ({Math.ceil(percentage)}%)
       </p>
 
-      <p className="highscrore">(Highscore: {highscore} points)</p>
-      <div>
-        <button
-          className="btn btn-ui"
-          onClick={() => dispatch({ type: "restart" })}
-        >
-          Restart Quiz
-        </button>
-      </div>
-    </div>
+      <p className="highscore">(Highscore: {highscore} points)</p>
+
+      <button
+        className="btn btn-ui"
+        onClick={() => dispatch({ type: "restart" })}
+      >
+        Restart Quiz
+      </button>
+    </>
   );
 };
 

@@ -12,7 +12,9 @@ const Options = ({ question, dispatch, answer }) => {
             hasAnswered
               ? index === question.correctOption
                 ? "correct"
-                : "wrong"
+                : index === answer
+                ? "wrong"
+                : ""
               : ""
           }`}
           onClick={() => dispatch({ type: "newAnswer", payload: index })}
