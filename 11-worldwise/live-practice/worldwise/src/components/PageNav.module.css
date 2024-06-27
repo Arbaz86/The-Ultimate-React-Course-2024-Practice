@@ -1,0 +1,25 @@
+.nav {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  width: 100%;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+.nav li {
+  padding: 20px;
+  font-weight: 600;
+}
+
+.nav a {
+  color: #333;
+  text-decoration: none;
+}
+
+.nav a:hover,
+.nav :global(.active) {
+  text-decoration: underline;
+}
