@@ -10,7 +10,7 @@
         "lat": 38.727881642324164,
         "lng": -9.140900099907554
       },
-      "id": 73930385
+      "id": "73930385"
     },
     {
       "cityName": "Madrid",
@@ -22,7 +22,7 @@
         "lat": 40.46635901755316,
         "lng": -3.7133789062500004
       },
-      "id": 17806751
+      "id": "17806751"
     },
     {
       "cityName": "Berlin",
@@ -34,7 +34,79 @@
         "lat": 52.53586782505711,
         "lng": 13.376933665713324
       },
-      "id": 9675673
+      "id": "9675673"
+    },
+    {
+      "id": "58cc",
+      "cityName": "Mumbai",
+      "country": "India",
+      "emoji": "🇮🇳",
+      "date": "2024-08-07T11:29:20.731Z",
+      "notes": "",
+      "position": {
+        "lat": "19.086777795661845",
+        "lng": "72.91076660156251"
+      }
+    },
+    {
+      "id": "65ae",
+      "cityName": "Valdelinares",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-08-07T11:31:26.899Z",
+      "notes": "",
+      "position": {
+        "lat": "40.39362664052989",
+        "lng": "-0.6358337402343751"
+      }
+    },
+    {
+      "id": "d537",
+      "cityName": "Torremocha de Jiloca",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-08-07T11:31:26.899Z",
+      "notes": "",
+      "position": {
+        "lat": "40.60769725157615",
+        "lng": "-1.2098693847656252"
+      }
+    },
+    {
+      "id": "dbc3",
+      "cityName": "Torremocha de Jiloca",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-08-07T11:31:26.899Z",
+      "notes": "",
+      "position": {
+        "lat": "40.60769725157615",
+        "lng": "-1.2098693847656252"
+      }
+    },
+    {
+      "id": "2f0a",
+      "cityName": "Torremocha de Jiloca",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-08-07T11:31:26.899Z",
+      "notes": "",
+      "position": {
+        "lat": "40.60769725157615",
+        "lng": "-1.2098693847656252"
+      }
+    },
+    {
+      "id": "fe36",
+      "cityName": "Torremocha de Jiloca",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-08-07T11:31:26.899Z",
+      "notes": "",
+      "position": {
+        "lat": "40.60769725157615",
+        "lng": "-1.2098693847656252"
+      }
     }
   ]
 }
