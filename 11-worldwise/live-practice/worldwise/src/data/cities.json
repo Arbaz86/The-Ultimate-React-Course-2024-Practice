@@ -47,66 +47,6 @@
         "lat": "19.086777795661845",
         "lng": "72.91076660156251"
       }
-    },
-    {
-      "id": "65ae",
-      "cityName": "Valdelinares",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2024-08-07T11:31:26.899Z",
-      "notes": "",
-      "position": {
-        "lat": "40.39362664052989",
-        "lng": "-0.6358337402343751"
-      }
-    },
-    {
-      "id": "d537",
-      "cityName": "Torremocha de Jiloca",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2024-08-07T11:31:26.899Z",
-      "notes": "",
-      "position": {
-        "lat": "40.60769725157615",
-        "lng": "-1.2098693847656252"
-      }
-    },
-    {
-      "id": "dbc3",
-      "cityName": "Torremocha de Jiloca",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2024-08-07T11:31:26.899Z",
-      "notes": "",
-      "position": {
-        "lat": "40.60769725157615",
-        "lng": "-1.2098693847656252"
-      }
-    },
-    {
-      "id": "2f0a",
-      "cityName": "Torremocha de Jiloca",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2024-08-07T11:31:26.899Z",
-      "notes": "",
-      "position": {
-        "lat": "40.60769725157615",
-        "lng": "-1.2098693847656252"
-      }
-    },
-    {
-      "id": "fe36",
-      "cityName": "Torremocha de Jiloca",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2024-08-07T11:31:26.899Z",
-      "notes": "",
-      "position": {
-        "lat": "40.60769725157615",
-        "lng": "-1.2098693847656252"
-      }
     }
   ]
 }

@@ -58,9 +58,32 @@ function CitiesProvider({ children }) {
     }
   }
 
+  async function deleteCity(id) {
+    try {
+      setIsLoading(true);
+      await fetch(`${BASE_URL}/cities/${id}`, {
+        method: "DELETE",
+      });
+
+      const filteredCities = cities.filter((el) => el.id !== id);
+      setCities(filteredCities);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
   return (
     <CitiesContext.Provider
-      value={{ cities, isLoading, currentCity, getCity, createCity }}
+      value={{
+        cities,
+        isLoading,
+        currentCity,
+        getCity,
+        createCity,
+        deleteCity,
+      }}
     >
       {children}
     </CitiesContext.Provider>
@@ -76,5 +99,4 @@ function useCities() {
   return context;
 }
 
-// eslint-disable-next-line react-refresh/only-export-components
 export { CitiesProvider, useCities };
