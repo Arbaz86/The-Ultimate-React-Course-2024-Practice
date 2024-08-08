@@ -11,10 +11,8 @@ const formatDate = (date) =>
   }).format(new Date(date));
 
 const CityItem = (city) => {
-  const { currentCity } = useCities();
+  const { currentCity, deleteCity } = useCities();
   const { cityName, emoji, date, id, position } = city;
-
-  const { deleteCity } = useCities();
 
   function handleDelete(e) {
     e.preventDefault();
