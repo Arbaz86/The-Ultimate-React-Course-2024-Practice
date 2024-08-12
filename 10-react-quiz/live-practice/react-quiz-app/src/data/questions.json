@@ -2,27 +2,35 @@
   "questions": [
     {
       "question": "Which is the most popular JavaScript framework?",
-      "options": ["Angular", "React", "Svelte", "Vue"],
+      "options": ["angular", "React", "Svelte", "Vue"],
       "correctOption": 1,
-      "points": 10
+      "points": 10,
+      "topic": "react",
+      "difficulty": "Easy"
     },
     {
       "question": "Which company invented React?",
       "options": ["Google", "Apple", "Netflix", "Facebook"],
       "correctOption": 3,
-      "points": 10
+      "points": 10,
+      "topic": "react",
+      "difficulty": "Easy"
     },
     {
       "question": "What's the fundamental building block of React apps?",
       "options": ["Components", "Blocks", "Elements", "Effects"],
       "correctOption": 0,
-      "points": 10
+      "points": 10,
+      "topic": "react",
+      "difficulty": "Easy"
     },
     {
       "question": "What's the name of the syntax we use to describe the UI in React components?",
       "options": ["FBJ", "Babel", "JSX", "ES2015"],
       "correctOption": 2,
-      "points": 10
+      "points": 20,
+      "topic": "react",
+      "difficulty": "Medium"
     },
     {
       "question": "How does data flow naturally in React apps?",
@@ -33,13 +41,17 @@
         "The developers decides"
       ],
       "correctOption": 0,
-      "points": 10
+      "points": 20,
+      "topic": "react",
+      "difficulty": "Medium"
     },
     {
       "question": "How to pass data into a child component?",
       "options": ["State", "Props", "PropTypes", "Parameters"],
       "correctOption": 1,
-      "points": 10
+      "points": 20,
+      "topic": "react",
+      "difficulty": "Medium"
     },
     {
       "question": "When to use derived state?",
@@ -50,7 +62,9 @@
         "Whenever the state can be computed from another state variable"
       ],
       "correctOption": 3,
-      "points": 30
+      "points": 30,
+      "topic": "react",
+      "difficulty": "Hard"
     },
     {
       "question": "What triggers a UI re-render in React?",
@@ -61,10 +75,12 @@
         "Adding event listeners to DOM elements"
       ],
       "correctOption": 2,
-      "points": 20
+      "points": 20,
+      "topic": "react",
+      "difficulty": "Medium"
     },
     {
-      "question": "When do we directly \"touch\" the DOM in React?",
+      "question": "When do we directly 'touch' the DOM in React?",
       "options": [
         "When we need to listen to an event",
         "When we need to change the UI",
@@ -72,7 +88,9 @@
         "Almost never"
       ],
       "correctOption": 3,
-      "points": 20
+      "points": 30,
+      "topic": "react",
+      "difficulty": "Hard"
     },
     {
       "question": "In what situation do we use a callback to update state?",
@@ -83,7 +101,9 @@
         "When the new state depends on the previous state"
       ],
       "correctOption": 3,
-      "points": 30
+      "points": 30,
+      "topic": "react",
+      "difficulty": "Hard"
     },
     {
       "question": "If we pass a function to useState, when will that function be called?",
@@ -94,13 +114,17 @@
         "The first time we update the state"
       ],
       "correctOption": 2,
-      "points": 30
+      "points": 30,
+      "topic": "react",
+      "difficulty": "Hard"
     },
     {
       "question": "Which hook to use for an API request on the component's initial render?",
       "options": ["useState", "useEffect", "useRef", "useReducer"],
       "correctOption": 1,
-      "points": 10
+      "points": 20,
+      "topic": "react",
+      "difficulty": "Medium"
     },
     {
       "question": "Which variables should go into the useEffect dependency array?",
@@ -111,7 +135,9 @@
         "All variables needed for clean up"
       ],
       "correctOption": 2,
-      "points": 30
+      "points": 30,
+      "topic": "react",
+      "difficulty": "Hard"
     },
     {
       "question": "An effect will always run on the initial render.",
@@ -122,7 +148,9 @@
         "In depends on the code in the effect"
       ],
       "correctOption": 0,
-      "points": 30
+      "points": 20,
+      "topic": "react",
+      "difficulty": "Medium"
     },
     {
       "question": "When will an effect run if it doesn't have a dependency array?",
@@ -133,124 +161,119 @@
         "Each time the component is re-rendered"
       ],
       "correctOption": 3,
-      "points": 20
-    }
-  ],
-  "flutterQuestions": [
+      "points": 20,
+      "topic": "react",
+      "difficulty": "Medium"
+    },
     {
-      "question": "What is the purpose of the 'GlobalKey' in Flutter?",
-      "options": [
-        "To uniquely identify a widget",
-        "To manage the state of a widget",
-        "To access the widget's context",
-        "All of the above"
-      ],
+      "question": "Which architecture pattern does Angular follow?",
+      "options": ["MVC", "MVVM", "Flux", "MV*"],
       "correctOption": 3,
-      "points": 30,
-      "id": "b001"
+      "points": 20,
+      "topic": "angular",
+      "difficulty": "Medium"
     },
     {
-      "question": "Which method would you override to customize the behavior when a StatefulWidget is disposed?",
+      "question": "What is a directive in Angular?",
       "options": [
-        "dispose()",
-        "deactivate()",
-        "didChangeDependencies()",
-        "didUpdateWidget()"
+        "A class that can modify the structure of the DOM",
+        "A function that helps manage data flow",
+        "An Angular component",
+        "A decorator"
       ],
       "correctOption": 0,
-      "points": 30,
-      "id": "b002"
+      "points": 10,
+      "topic": "angular",
+      "difficulty": "Easy"
     },
     {
-      "question": "How can you optimize a widget rebuild performance in Flutter?",
+      "question": "What does the async pipe do in Angular?",
       "options": [
-        "Using const constructors",
-        "Using keys",
-        "Using the RepaintBoundary widget",
-        "All of the above"
-      ],
-      "correctOption": 3,
-      "points": 30,
-      "id": "b003"
-    },
-    {
-      "question": "What does the 'InheritedWidget' do in Flutter?",
-      "options": [
-        "Holds data that can be accessed by descendant widgets",
-        "Manages the state of its child widgets",
-        "Provides a widget that has been inherited from another widget",
-        "Allows the creation of complex animations"
-      ],
-      "correctOption": 0,
-      "points": 30,
-      "id": "b004"
-    },
-    {
-      "question": "How would you implement a custom painter in Flutter?",
-      "options": [
-        "Using the CustomPainter class",
-        "Using the Canvas class directly",
-        "Using the ShapeBorder class",
-        "Using the BoxPainter class"
-      ],
-      "correctOption": 0,
-      "points": 30,
-      "id": "b005"
-    },
-    {
-      "question": "Which widget is used to handle gestures in Flutter?",
-      "options": [
-        "GestureDetector",
-        "Listener",
-        "GestureHandler",
-        "EventDetector"
-      ],
-      "correctOption": 0,
-      "points": 30,
-      "id": "b006"
-    },
-    {
-      "question": "What is the difference between 'mainAxisAlignment' and 'crossAxisAlignment' in a Row widget?",
-      "options": [
-        "mainAxisAlignment aligns children horizontally, crossAxisAlignment aligns children vertically",
-        "mainAxisAlignment aligns children vertically, crossAxisAlignment aligns children horizontally",
-        "mainAxisAlignment aligns children along the main axis, crossAxisAlignment aligns children along the cross axis",
-        "There is no difference"
+        "Handles asynchronous operations",
+        "Wraps Promises in Observables",
+        "Unwraps a value from an Observable or Promise",
+        "Provides a callback mechanism for async operations"
       ],
       "correctOption": 2,
-      "points": 30,
-      "id": "b007"
+      "points": 20,
+      "topic": "angular",
+      "difficulty": "Medium"
     },
     {
-      "question": "In Flutter, what is the difference between 'StreamBuilder' and 'FutureBuilder'?",
+      "question": "Which command is used to create a new Angular project?",
+      "options": ["ng new", "ng create", "ng generate", "ng init"],
+      "correctOption": 0,
+      "points": 10,
+      "topic": "angular",
+      "difficulty": "Easy"
+    },
+    {
+      "question": "How do you inject a service into a component in Angular?",
       "options": [
-        "StreamBuilder handles asynchronous data streams, FutureBuilder handles a single asynchronous computation",
-        "FutureBuilder handles asynchronous data streams, StreamBuilder handles a single asynchronous computation",
-        "StreamBuilder is used for handling real-time data, FutureBuilder is not",
-        "There is no difference"
+        "Using the @Injectable decorator",
+        "Using the @Inject decorator",
+        "Passing it as an argument to the constructor",
+        "Importing it and using it directly"
+      ],
+      "correctOption": 2,
+      "points": 20,
+      "topic": "angular",
+      "difficulty": "Medium"
+    },
+    {
+      "question": "What does 'ngOnInit' do in Angular?",
+      "options": [
+        "Sets up event listeners for the component",
+        "Executes code after the component's view has been initialized",
+        "Executes code during the component's initialization",
+        "Handles the destruction of the component"
+      ],
+      "correctOption": 2,
+      "points": 20,
+      "topic": "angular",
+      "difficulty": "Medium"
+    },
+    {
+      "question": "Which of the following is not a primitive data type in JavaScript?",
+      "options": ["String", "Boolean", "Object", "Number"],
+      "correctOption": 2,
+      "points": 10,
+      "topic": "javascript",
+      "difficulty": "Easy"
+    },
+    {
+      "question": "What is the output of 'typeof null' in JavaScript?",
+      "options": ["null", "undefined", "object", "string"],
+      "correctOption": 2,
+      "points": 20,
+      "topic": "javascript",
+      "difficulty": "Medium"
+    },
+    {
+      "question": "Which method is used to convert a JSON string into a JavaScript object?",
+      "options": [
+        "JSON.parse()",
+        "JSON.stringify()",
+        "JSON.convert()",
+        "JSON.toObject()"
       ],
       "correctOption": 0,
-      "points": 30,
-      "id": "b008"
+      "points": 10,
+      "topic": "javascript",
+      "difficulty": "Easy"
     },
     {
-      "question": "Which architectural pattern does the 'Provider' package in Flutter support?",
-      "options": ["MVC", "MVVM", "Redux", "BLoC"],
-      "correctOption": 1,
-      "points": 30,
-      "id": "b009"
-    },
-    {
-      "question": "How do you perform dependency injection in Flutter?",
+      "question": "What is 'hoisting' in JavaScript?",
       "options": [
-        "Using the Provider package",
-        "Using the InheritedWidget",
-        "Using the GetIt package",
-        "All of the above"
+        "The behavior of moving all declarations to the top of the current scope",
+        "The way JavaScript handles variable shadowing",
+        "The way JavaScript cleans up memory",
+        "A method for making code asynchronous"
       ],
-      "correctOption": 3,
-      "points": 30,
-      "id": "b010"
+      "correctOption": 0,
+      "points": 20,
+      "topic": "javascript",
+      "difficulty": "Medium"
     }
   ]
 }

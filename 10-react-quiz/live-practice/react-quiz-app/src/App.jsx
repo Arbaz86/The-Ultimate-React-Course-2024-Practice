@@ -23,21 +23,22 @@ const initialState = {
   answer: null,
   points: 0,
   highscore: 0,
-  topic: "react",
+  topic: "angular",
   secondsRemaining: null,
 };
 
 function reducer(state, { type, payload }) {
   switch (type) {
-    case "dataReceived":
+    case "dataReceived": {
       return { ...state, questions: payload, status: "ready" };
+    }
     case "dataFailed":
       return { ...state, status: "error" };
     case "start":
       return {
         ...state,
         status: "active",
-        secondsRemaining: state.questions.length * SECS_PER_QUESTION,
+        secondsRemaining: state.questions?.length * SECS_PER_QUESTION,
       };
     case "newAnswer": {
       const question = state.questions.at(state.index);
@@ -106,9 +107,9 @@ function App() {
   );
 
   useEffect(() => {
-    fetch(`http://localhost:8080/api/v1/questions?topic=${topic}`)
+    fetch(`http://localhost:8000/questions?topic=${topic}`)
       .then((res) => res.json())
-      .then((data) => dispatch({ type: "dataReceived", payload: data.data }))
+      .then((data) => dispatch({ type: "dataReceived", payload: data }))
       .catch(() => dispatch({ type: "dataFailed" }));
   }, [topic]);
 
