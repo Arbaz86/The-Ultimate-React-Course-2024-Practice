@@ -1,0 +1,279 @@
+{
+  "questions": [
+    {
+      "question": "Which is the most popular JavaScript framework?",
+      "options": ["angular", "React", "Svelte", "Vue"],
+      "correctOption": 1,
+      "points": 10,
+      "topic": "react",
+      "difficulty": "Easy"
+    },
+    {
+      "question": "Which company invented React?",
+      "options": ["Google", "Apple", "Netflix", "Facebook"],
+      "correctOption": 3,
+      "points": 10,
+      "topic": "react",
+      "difficulty": "Easy"
+    },
+    {
+      "question": "What's the fundamental building block of React apps?",
+      "options": ["Components", "Blocks", "Elements", "Effects"],
+      "correctOption": 0,
+      "points": 10,
+      "topic": "react",
+      "difficulty": "Easy"
+    },
+    {
+      "question": "What's the name of the syntax we use to describe the UI in React components?",
+      "options": ["FBJ", "Babel", "JSX", "ES2015"],
+      "correctOption": 2,
+      "points": 20,
+      "topic": "react",
+      "difficulty": "Medium"
+    },
+    {
+      "question": "How does data flow naturally in React apps?",
+      "options": [
+        "From parents to children",
+        "From children to parents",
+        "Both ways",
+        "The developers decides"
+      ],
+      "correctOption": 0,
+      "points": 20,
+      "topic": "react",
+      "difficulty": "Medium"
+    },
+    {
+      "question": "How to pass data into a child component?",
+      "options": ["State", "Props", "PropTypes", "Parameters"],
+      "correctOption": 1,
+      "points": 20,
+      "topic": "react",
+      "difficulty": "Medium"
+    },
+    {
+      "question": "When to use derived state?",
+      "options": [
+        "Whenever the state should not trigger a re-render",
+        "Whenever the state can be synchronized with an effect",
+        "Whenever the state should be accessible to all components",
+        "Whenever the state can be computed from another state variable"
+      ],
+      "correctOption": 3,
+      "points": 30,
+      "topic": "react",
+      "difficulty": "Hard"
+    },
+    {
+      "question": "What triggers a UI re-render in React?",
+      "options": [
+        "Running an effect",
+        "Passing props",
+        "Updating state",
+        "Adding event listeners to DOM elements"
+      ],
+      "correctOption": 2,
+      "points": 20,
+      "topic": "react",
+      "difficulty": "Medium"
+    },
+    {
+      "question": "When do we directly 'touch' the DOM in React?",
+      "options": [
+        "When we need to listen to an event",
+        "When we need to change the UI",
+        "When we need to add styles",
+        "Almost never"
+      ],
+      "correctOption": 3,
+      "points": 30,
+      "topic": "react",
+      "difficulty": "Hard"
+    },
+    {
+      "question": "In what situation do we use a callback to update state?",
+      "options": [
+        "When updating the state will be slow",
+        "When the updated state is very data-intensive",
+        "When the state update should happen faster",
+        "When the new state depends on the previous state"
+      ],
+      "correctOption": 3,
+      "points": 30,
+      "topic": "react",
+      "difficulty": "Hard"
+    },
+    {
+      "question": "If we pass a function to useState, when will that function be called?",
+      "options": [
+        "On each re-render",
+        "Each time we update the state",
+        "Only on the initial render",
+        "The first time we update the state"
+      ],
+      "correctOption": 2,
+      "points": 30,
+      "topic": "react",
+      "difficulty": "Hard"
+    },
+    {
+      "question": "Which hook to use for an API request on the component's initial render?",
+      "options": ["useState", "useEffect", "useRef", "useReducer"],
+      "correctOption": 1,
+      "points": 20,
+      "topic": "react",
+      "difficulty": "Medium"
+    },
+    {
+      "question": "Which variables should go into the useEffect dependency array?",
+      "options": [
+        "Usually none",
+        "All our state variables",
+        "All state and props referenced in the effect",
+        "All variables needed for clean up"
+      ],
+      "correctOption": 2,
+      "points": 30,
+      "topic": "react",
+      "difficulty": "Hard"
+    },
+    {
+      "question": "An effect will always run on the initial render.",
+      "options": [
+        "True",
+        "It depends on the dependency array",
+        "False",
+        "In depends on the code in the effect"
+      ],
+      "correctOption": 0,
+      "points": 20,
+      "topic": "react",
+      "difficulty": "Medium"
+    },
+    {
+      "question": "When will an effect run if it doesn't have a dependency array?",
+      "options": [
+        "Only when the component mounts",
+        "Only when the component unmounts",
+        "The first time the component re-renders",
+        "Each time the component is re-rendered"
+      ],
+      "correctOption": 3,
+      "points": 20,
+      "topic": "react",
+      "difficulty": "Medium"
+    },
+    {
+      "question": "Which architecture pattern does Angular follow?",
+      "options": ["MVC", "MVVM", "Flux", "MV*"],
+      "correctOption": 3,
+      "points": 20,
+      "topic": "angular",
+      "difficulty": "Medium"
+    },
+    {
+      "question": "What is a directive in Angular?",
+      "options": [
+        "A class that can modify the structure of the DOM",
+        "A function that helps manage data flow",
+        "An Angular component",
+        "A decorator"
+      ],
+      "correctOption": 0,
+      "points": 10,
+      "topic": "angular",
+      "difficulty": "Easy"
+    },
+    {
+      "question": "What does the async pipe do in Angular?",
+      "options": [
+        "Handles asynchronous operations",
+        "Wraps Promises in Observables",
+        "Unwraps a value from an Observable or Promise",
+        "Provides a callback mechanism for async operations"
+      ],
+      "correctOption": 2,
+      "points": 20,
+      "topic": "angular",
+      "difficulty": "Medium"
+    },
+    {
+      "question": "Which command is used to create a new Angular project?",
+      "options": ["ng new", "ng create", "ng generate", "ng init"],
+      "correctOption": 0,
+      "points": 10,
+      "topic": "angular",
+      "difficulty": "Easy"
+    },
+    {
+      "question": "How do you inject a service into a component in Angular?",
+      "options": [
+        "Using the @Injectable decorator",
+        "Using the @Inject decorator",
+        "Passing it as an argument to the constructor",
+        "Importing it and using it directly"
+      ],
+      "correctOption": 2,
+      "points": 20,
+      "topic": "angular",
+      "difficulty": "Medium"
+    },
+    {
+      "question": "What does 'ngOnInit' do in Angular?",
+      "options": [
+        "Sets up event listeners for the component",
+        "Executes code after the component's view has been initialized",
+        "Executes code during the component's initialization",
+        "Handles the destruction of the component"
+      ],
+      "correctOption": 2,
+      "points": 20,
+      "topic": "angular",
+      "difficulty": "Medium"
+    },
+    {
+      "question": "Which of the following is not a primitive data type in JavaScript?",
+      "options": ["String", "Boolean", "Object", "Number"],
+      "correctOption": 2,
+      "points": 10,
+      "topic": "javascript",
+      "difficulty": "Easy"
+    },
+    {
+      "question": "What is the output of 'typeof null' in JavaScript?",
+      "options": ["null", "undefined", "object", "string"],
+      "correctOption": 2,
+      "points": 20,
+      "topic": "javascript",
+      "difficulty": "Medium"
+    },
+    {
+      "question": "Which method is used to convert a JSON string into a JavaScript object?",
+      "options": [
+        "JSON.parse()",
+        "JSON.stringify()",
+        "JSON.convert()",
+        "JSON.toObject()"
+      ],
+      "correctOption": 0,
+      "points": 10,
+      "topic": "javascript",
+      "difficulty": "Easy"
+    },
+    {
+      "question": "What is 'hoisting' in JavaScript?",
+      "options": [
+        "The behavior of moving all declarations to the top of the current scope",
+        "The way JavaScript handles variable shadowing",
+        "The way JavaScript cleans up memory",
+        "A method for making code asynchronous"
+      ],
+      "correctOption": 0,
+      "points": 20,
+      "topic": "javascript",
+      "difficulty": "Medium"
+    }
+  ]
+}
