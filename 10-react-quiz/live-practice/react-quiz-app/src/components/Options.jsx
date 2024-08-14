@@ -1,6 +1,8 @@
-import PropTypes from "prop-types";
+import { useQuiz } from "../contexts/QuizContext";
+import { PropTypes } from "prop-types";
 
-const Options = ({ question, dispatch, answer }) => {
+const Options = ({ question }) => {
+  const { dispatch, answer } = useQuiz();
   const hasAnswered = answer !== null;
 
   return (
@@ -28,9 +30,7 @@ const Options = ({ question, dispatch, answer }) => {
 };
 
 Options.propTypes = {
-  question: PropTypes.object.isRequired,
-  dispatch: PropTypes.any.isRequired,
-  answer: PropTypes.number,
+  question: PropTypes.any.isRequired,
 };
 
 export default Options;

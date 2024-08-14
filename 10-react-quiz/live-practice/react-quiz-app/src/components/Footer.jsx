@@ -4,7 +4,7 @@ const Footer = ({ children }) => {
   return <div>{children}</div>;
 };
 
-Footer.proptypes = {
+Footer.propTypes = {
   children: PropTypes.any.isRequired,
 };
 

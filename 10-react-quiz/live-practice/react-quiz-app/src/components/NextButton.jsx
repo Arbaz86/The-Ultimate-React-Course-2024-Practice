@@ -1,6 +1,8 @@
-import PropTypes from "prop-types";
+import { useQuiz } from "../contexts/QuizContext";
 
-const NextButton = ({ dispatch, answer, index, numQuestions }) => {
+const NextButton = () => {
+  const { dispatch, answer, index, numQuestions } = useQuiz();
+
   if (answer === null) return null;
 
   if (index < numQuestions - 1) {
@@ -28,13 +30,6 @@ const NextButton = ({ dispatch, answer, index, numQuestions }) => {
       </div>
     );
   }
-};
-
-NextButton.propTypes = {
-  dispatch: PropTypes.any.isRequired,
-  answer: PropTypes.number,
-  index: PropTypes.number.isRequired,
-  numQuestions: PropTypes.number.isRequired,
 };
 
 export default NextButton;

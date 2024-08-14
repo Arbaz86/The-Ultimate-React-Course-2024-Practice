@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { PropTypes } from "prop-types";
+import { useQuiz } from "../contexts/QuizContext";
 
-const Timer = ({ secondsRemaining, dispatch }) => {
+const Timer = () => {
+  const { secondsRemaining, dispatch } = useQuiz();
+
   const [timer, setTimer] = useState(secondsRemaining);
-
   const minuts = Math.floor(timer / 60);
   const seconds = timer % 60;
 
@@ -27,11 +28,6 @@ const Timer = ({ secondsRemaining, dispatch }) => {
       {seconds > 9 ? seconds : `0${seconds}`}
     </div>
   );
-};
-
-Timer.propTypes = {
-  secondsRemaining: PropTypes.number.isRequired,
-  dispatch: PropTypes.any,
 };
 
 export default Timer;

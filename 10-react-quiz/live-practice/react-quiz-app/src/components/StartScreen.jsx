@@ -1,6 +1,8 @@
-import PropTypes from "prop-types";
+import { useQuiz } from "../contexts/QuizContext";
 
-const StartScreen = ({ numQuestions, dispatch }) => {
+const StartScreen = () => {
+  const { numQuestions, dispatch } = useQuiz();
+
   return (
     <div className="start">
       <h2>Welcome to The React Quiz!</h2>
@@ -13,11 +15,6 @@ const StartScreen = ({ numQuestions, dispatch }) => {
       </button>
     </div>
   );
-};
-
-StartScreen.propTypes = {
-  numQuestions: PropTypes.number.isRequired,
-  dispatch: PropTypes.any,
 };
 
 export default StartScreen;
