@@ -54,9 +54,9 @@ function App() {
   const archiveOptions = useMemo(() => {
     return {
       show: false,
-      title: "Post archieve in addition to main posts",
+      title: `Post archieve in addition to ${posts.length} main posts`,
     };
-  }, []);
+  }, [posts.length]);
 
   return (
     <PostContext.Provider
