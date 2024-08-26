@@ -1,4 +1,4 @@
-import { memo, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import clickSound from "./ClickSound.m4a";
 
 function Calculator({ workouts, allowSound }) {
@@ -7,7 +7,13 @@ function Calculator({ workouts, allowSound }) {
   const [speed, setSpeed] = useState(90);
   const [durationBreak, setDurationBreak] = useState(5);
 
-  const duration = (number * sets * speed) / 60 + (sets - 1) * durationBreak;
+  const [duration, setDuration] = useState(0);
+
+  useEffect(() => {
+    setDuration((number * sets * speed) / 60 + (sets - 1) * durationBreak);
+  }, [durationBreak, number, sets, speed]);
+
+  // const duration = (number * sets * speed) / 60 + (sets - 1) * durationBreak;
   const mins = Math.floor(duration);
   const seconds = (duration - mins) * 60;
 
@@ -15,6 +21,15 @@ function Calculator({ workouts, allowSound }) {
     if (!allowSound) return;
     const sound = new Audio(clickSound);
     sound.play();
+  };
+
+  const handleInc = function () {
+    playSound();
+    setDuration((duration) => Math.floor(duration) + 1);
+  };
+  const handleDec = function () {
+    playSound();
+    setDuration((duration) => (duration > 0 ? Math.ceil(duration) - 1 : 0));
   };
 
   return (
@@ -81,13 +96,13 @@ function Calculator({ workouts, allowSound }) {
         </div>
       </form>
       <section>
-        <button onClick={() => {}}>–</button>
+        <button onClick={handleDec}>–</button>
         <p>
           {mins < 10 && "0"}
           {mins}:{seconds < 10 && "0"}
           {seconds}
         </p>
-        <button onClick={() => {}}>+</button>
+        <button onClick={handleInc}>+</button>
       </section>
     </>
   );
